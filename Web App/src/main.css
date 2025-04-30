@@ -1,0 +1,157 @@
+:root {
+  --img-width: 100%;
+}
+
+
+
+.sono-200 {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.sono-300 {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.sono-400 {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.sono-500 {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.sono-600 {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.sono-700 {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.sono-800 {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: var(--img-width);
+    object-fit: cover;
+    object-position: center;
+    transition: width 0.3s, height 0.3s;
+  }
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000ba;
+}
+
+.controller {
+  background-color: #5c29ffb0;
+  position: absolute;
+  height: 10%;
+  min-height: 50px;
+  width: 65%;
+  bottom: 5%;
+  border-radius: 18px;
+}
+
+.container {
+  margin: 1% 5%;
+  height: 80%;
+  width: 90%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  .nav {
+    color: #ffffff;
+    margin: 1.5%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+
+    .breadcrumb {
+      background: #00000057;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .search {
+      width: 14%;
+      background: #e7dedebd;
+      border-radius: 10px;
+      height: calc(90%);
+    }
+  }
+
+  .divider {
+    width: 100%;
+    background: #5b5b5b;
+    height: 0.2%;
+  }
+}
+
+@media (orientation: portrait) {
+  :root {
+    --img-width: auto;
+  }
+}
