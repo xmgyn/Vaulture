@@ -79,6 +79,16 @@ body {
   justify-content: center;
 }
 
+.loading-bar {
+  display: none;
+  position: sticky;
+  background: linear-gradient(to right, #ffb60a 75%, transparent 25%);
+  top: 0px;
+  height: 5px;
+  width: 100%;
+  z-index: 3;
+}
+
 .background {
   position: absolute;
   display: flex;
@@ -104,12 +114,59 @@ body {
   background-color: #000000ba;
 }
 
+.repo {
+  display: flex;
+}
+
+.item {
+
+  height: 14vh;
+  width: 5vw;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  background: #ffffff0d;
+  border-radius: 10px;
+  padding: 15px;
+
+  .item-logo {
+    display: flex;
+    height: 75%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  .item-title {
+    display: flex;
+    justify-content: center;
+    height: 25%;
+    overflow: hidden;
+    font-size: 14px;
+    text-overflow: clip;
+    width: 100%;
+  }
+}
+
+.item:hover {
+  cursor: pointer;
+  background: #ffffff12;
+}
+
 .controller {
   background-color: #5c29ffb0;
   position: absolute;
-  height: 10%;
+  height: 8%;
   min-height: 50px;
-  width: 65%;
+  width: 28%;
   bottom: 5%;
   border-radius: 18px;
 }
@@ -148,6 +205,18 @@ body {
     background: #5b5b5b;
     height: 0.2%;
   }
+}
+
+.timer {
+  background-color: #00000057;
+  position: absolute;
+  height: 8%;
+  min-height: 50px;
+  color: white;
+  width: 13%;
+  bottom: 5%;
+  left: 2%;
+  border-radius: 10px;
 }
 
 @media (orientation: portrait) {
